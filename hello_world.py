@@ -7,7 +7,7 @@ class HelloWorld(QtWidgets.QApplication):
         # ? can also be replaced by
         '''
         self.window=QtWidgets.QtWidget()
-        self.window.setwindowTitle('Hello World')
+        self.window.setWindowTitle('Hello World')
         '''
         print('The Title for the QWidget is : {}'.format(self.window.windowTitle()))
         self.window.show()
