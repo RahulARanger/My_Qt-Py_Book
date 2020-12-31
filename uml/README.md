@@ -12,5 +12,5 @@ We use pyuic5 commands to convert ui to the python code.
         * pyuic5 -x -o (path for the new.py file) (path for the .ui file) converts the ui file to the .py file and makes it executabl
         * pyuic5 --version for displaying the version of the pyuic5
 
-### *  Don't modify the ui file so generated try to inherit that object. we may use that file again.
+### *  Don't modify the ui file so generated try to inherit that object or create the object in that file. we may use that file again.
 

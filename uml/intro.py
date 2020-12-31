@@ -14,7 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
+        Form.setEnabled(True)
         Form.resize(349, 130)
+        Form.setMouseTracking(False)
+        Form.setAcceptDrops(False)
+        Form.setAutoFillBackground(False)
         self.formLayout = QtWidgets.QFormLayout(Form)
         self.formLayout.setObjectName("formLayout")
         self.welcome = QtWidgets.QLabel(Form)
@@ -34,6 +38,7 @@ class Ui_Form(object):
         self.username.setFont(font)
         self.username.setText("")
         self.username.setFrame(True)
+        self.username.setClearButtonEnabled(True)
         self.username.setObjectName("username")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.username)
         self.passwordlabel = QtWidgets.QLabel(Form)
@@ -47,30 +52,32 @@ class Ui_Form(object):
         self.password.setClearButtonEnabled(True)
         self.password.setObjectName("password")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.password)
-        self.pushButton_2 = QtWidgets.QPushButton(Form)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.pushButton_2)
+        self.login = QtWidgets.QPushButton(Form)
+        self.login.setObjectName("login")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.login)
         self.usernamelabel.raise_()
         self.passwordlabel.raise_()
         self.password.raise_()
         self.welcome.raise_()
-        self.pushButton_2.raise_()
+        self.login.raise_()
         self.username.raise_()
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
         Form.setTabOrder(self.username, self.password)
-        Form.setTabOrder(self.password, self.pushButton_2)
+        Form.setTabOrder(self.password, self.login)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Login Window"))
+        Form.setToolTip(_translate("Form", "Login Page"))
         self.welcome.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-weight:600; color:#ff557f;\">Greetings</span></p></body></html>"))
         self.welcome.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffaa00;\">WELCOME TO THE LOGIN PAGE</span></p></body></html>"))
         self.usernamelabel.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">UserName</span><span style=\" font-size:10pt;\">:</span></p></body></html>"))
         self.username.setWhatsThis(_translate("Form", "<html><head/><body><p>Enter Your UserName:</p><p><br/></p></body></html>"))
+        self.username.setPlaceholderText(_translate("Form", "Enter Your UserName:"))
         self.passwordlabel.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Password</span>:</p></body></html>"))
-        self.pushButton_2.setText(_translate("Form", "Login"))
+        self.login.setText(_translate("Form", "Login"))
 
 
 if __name__ == "__main__":

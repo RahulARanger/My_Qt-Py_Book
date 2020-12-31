@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,8 +13,20 @@
     <height>130</height>
    </rect>
   </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Login Window</string>
+  </property>
+  <property name="toolTip">
+   <string>Login Page</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="0" colspan="2">
@@ -56,6 +71,12 @@
      <property name="frame">
       <bool>true</bool>
      </property>
+     <property name="placeholderText">
+      <string>Enter Your UserName:</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item row="2" column="0">
@@ -85,7 +106,7 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="login">
      <property name="text">
       <string>Login</string>
      </property>
@@ -96,13 +117,13 @@
   <zorder>passwordlabel</zorder>
   <zorder>password</zorder>
   <zorder>welcome</zorder>
-  <zorder>pushButton_2</zorder>
+  <zorder>login</zorder>
   <zorder>username</zorder>
  </widget>
  <tabstops>
   <tabstop>username</tabstop>
   <tabstop>password</tabstop>
-  <tabstop>pushButton_2</tabstop>
+  <tabstop>login</tabstop>
  </tabstops>
  <resources/>
  <connections/>
