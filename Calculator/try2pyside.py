@@ -10,19 +10,17 @@ import string
 class CalcVald(QtGui.QValidator):
     def __init__(self):
         super().__init__()
+        self.result=None
     def dotht(self,string_):
         return str(string_).replace('^','**')
     def validate(self,string_,index):
         state=QtGui.QValidator.Acceptable
-        if index-1<0:return state,string_,index
-        whatisit='n' if string_[index-1] in string.digits else '?'
-        if whatisit=='?':
+        if string_[-1] in '+-/*.':
+            return state,string_,index
+        try:
+            self.result=str(eval(self.dotht(string_)))
+        except:
             state=QtGui.QValidator.Invalid
-            whatisit='s' if string_[index-1] in '+.-*/^' else '?'
-            if whatisit=='s':
-                if  index-2<0 and string[index-1]=='.' :state=QtGui.QValidator.Acceptable
-                else: 
-                    if string_[index-2] not in '+-/*.^':state=QtGui.QValidator.Acceptable
         return state,string_,index
 class Calcu(class2,class1):
     def __init__(self):
@@ -42,7 +40,7 @@ class Calcu(class2,class1):
         self.equal.clicked.connect(self.addLog)
     def addLog(self):
         # dump logs for now
-        self.display.setText(self.validator.dotht(eval((self.display.text()))))
+        self.display.setText(self.validator.result)
         self.listWidget.addItem(str(self.display.text()))
     def start(self):
         self.show()
@@ -50,3 +48,4 @@ class Calcu(class2,class1):
 app=QtWidgets.QApplication([])
 a=Calcu()
 app.exec_()
+

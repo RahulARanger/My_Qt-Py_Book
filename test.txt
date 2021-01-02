@@ -1,5 +1,0 @@
-<_io.TextIOWrapper name='test.txt' mode='w+' encoding='cp1252'>
-<class '_io.TextIOWrapper'>
-a
-[]
-[]
