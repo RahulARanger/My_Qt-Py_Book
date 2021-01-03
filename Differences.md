@@ -11,4 +11,8 @@ But they posses some significant differences. and it is important between anyone
 
 *  for executing QApplication `exec_()` only works for the `PySide.QtWidgets.QApplication()` but for the PyQt5 it is `exec()`.
 
+* For Constructing own signals we use `PySide6.QtCore.Signal()` but in PyQt5 we use `PyQt5.QtCore.pyqtSignal()`  and for slot we use `PySide6.QtCore.Slot()` but for PyQt5 we use `PyQt5.QtCore.pyqtSlot()`
+
+* Key Bindings are listed in `QtCore.Qt` for PyQt5 but for PySide it's `QtGui.Qt`
+
 

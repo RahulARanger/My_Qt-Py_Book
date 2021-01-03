@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PyQt5 import QtCore, QtWidgets
 # TODO: This is the second method for creating the messsagebox (this is the more customizable than the first one)
 # * Docs: https://doc.qt.io/qtforpython/PySide6/QtWidgets/QMessageBox.html#id2
 class test(QtWidgets.QApplication):
@@ -44,8 +44,9 @@ class test(QtWidgets.QApplication):
         self.war.setDetailedText('Hello There this is the warning Box')
         self.que.setDetailedText('Hello There this is the question Box')
         self.cri.setDetailedText('Hello There this is the Critical Message Box')
-        self.cri.setInformativeText('This is more informative text')        
-        
+        self.cri.setInformativeText('This is more informative text')    
+            
+        self.que.setWindowModality(QtCore.Qt.WindowModal)
         self.info.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Help) # we use pipes to add more than one buttons
         self.war.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Help | QtWidgets.QMessageBox.RestoreDefaults)
         # ? This is how the standard Buttons are added to the Message Box

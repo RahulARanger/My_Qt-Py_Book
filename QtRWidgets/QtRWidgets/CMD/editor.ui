@@ -41,11 +41,7 @@
           <height>301</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="tab1layout">
-         <item>
-          <widget class="QTextEdit" name="cmdeditor"/>
-         </item>
-        </layout>
+        <layout class="QVBoxLayout" name="tab1layout"/>
        </widget>
       </widget>
       <widget class="QWidget" name="settings">
