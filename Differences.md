@@ -7,7 +7,7 @@ But they posses some significant differences. and it is important between anyone
 
 # Pyside6 vs PyQt5
 
-* They also differ in method for loading the UI file using the module (refer: [PyQt5](https://github.com/RahulARanger/My_PyQt5_Book/blob/master/Calculator/try2.py) and [PySide6](https://github.com/RahulARanger/My_PyQt5_Book/blob/master/Calculator/try2.py))
+* They also differ in method for loading the UI file using the module (refer: [PyQt5](https://github.com/RahulARanger/My_PyQt5_Book/blob/master/Calculator/try2.py) and [PySide6](https://github.com/RahulARanger/My_PyQt5_Book/blob/a66f159f4ec959b3c94166c66b03fe5678587586/Calculator/try2pyside.py))
 
 *  for executing QApplication `exec_()` only works for the `PySide.QtWidgets.QApplication()` but for the PyQt5 it is `exec()`.
 
