@@ -24,4 +24,5 @@ class test(QtWidgets.QApplication):
         self.display.setPixmap(self.image)
         self.display.repaint() # ? for refreshing the label 
         self.display.resize(self.image.width(),self.image.height()) # ? for resizing the label
+        self.window.resize(self.image.width(),self.image.height()) # ? for resizing the label
 test().exec()

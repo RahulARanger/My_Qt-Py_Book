@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets,QtCore,QtGui
+from PyQt5 import QtWidgets,QtCore
 class editor(QtWidgets.QTextEdit):
     def __init__(self,parent=None):
         super().__init__(parent)
