@@ -1,5 +1,6 @@
 __version__='0.1.0'
-from .pathfinder import pathfinder
+from QtRWidgets.ImageViewer import ImageViewer,QuickImageView
+
 __all__=[
-    'pathfinder'
-]
+    'ImageViewer',
+    'QuickImageView']

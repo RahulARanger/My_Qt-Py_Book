@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets,QtCore,QtGui
-
+    
 class Page(QtWidgets.QWidget):
     def __init__(self,parent,text):
         super().__init__(parent)
