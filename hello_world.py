@@ -1,9 +1,11 @@
 from PyQt5 import QtWidgets
+
+
 # ! note that PyQt5 follows camel case (first letter of func are small and latter are caps but the all first letter of the words in class must be in caps)
 class HelloWorld(QtWidgets.QApplication):
     def __init__(self):
-        super().__init__([]) # ? we can pass the command line arguments 
-        self.window=QtWidgets.QWidget(windowTitle='Hello World')
+        super().__init__([])  # ? we can pass the command line arguments
+        self.window = QtWidgets.QWidget(windowTitle='Hello World')
         # ? can also be replaced by
         '''
         self.window=QtWidgets.QtWidget()
@@ -11,7 +13,9 @@ class HelloWorld(QtWidgets.QApplication):
         '''
         print('The Title for the QWidget is : {}'.format(self.window.windowTitle()))
         self.window.show()
-store=HelloWorld()
+
+
+store = HelloWorld()
 store.exec()
 
 # * Summary 
