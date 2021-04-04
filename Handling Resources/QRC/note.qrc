@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="media">
+        <file alias="gif">gif.svg</file>
+        <file alias="close">close.svg</file>
+        <file alias="image">image.svg</file>
+        <file alias="pat_rem">pat_rem.gif</file>
+        <file alias="rem">rem.jpg</file>
+
+    </qresource>
+</RCC>

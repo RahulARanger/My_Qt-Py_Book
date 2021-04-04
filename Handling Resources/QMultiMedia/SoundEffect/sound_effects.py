@@ -3,7 +3,6 @@
 
 from PyQt5 import QtMultimedia, QtCore, QtWidgets
 
-
 testing = QtWidgets.QApplication([])
 sample = QtWidgets.QWidget()
 sample_bt = QtWidgets.QPushButton(sample)
