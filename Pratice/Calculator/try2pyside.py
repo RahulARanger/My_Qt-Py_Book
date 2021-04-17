@@ -1,4 +1,4 @@
-from PySide6 import QtUiTools, QtWidgets, QtGui
+from PySide2 import QtUiTools, QtWidgets, QtGui
 
 # ! loadui() is used for analyzing and modifying ui files through python (not just for reading that ui files)
 # way to load the UI file in Pyside6
