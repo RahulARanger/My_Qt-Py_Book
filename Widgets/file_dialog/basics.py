@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets, QtCore
+from PySide2 import QtWidgets, QtCore
 import os
 
 
@@ -26,4 +26,4 @@ class test(QtWidgets.QApplication):
         self.window.show()
 
 
-test().exec()
+test().exec_()

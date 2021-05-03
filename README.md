@@ -1,11 +1,12 @@
-# Installation  
+# Modules Used
 
- ###  `pip install PyQt5` 
+### `PySide2`,`PyQt5`
 
 # Documentation  
+ ### * [PyQt5](https://doc.bccnsoft.com/docs/PyQt5/)
 
- ### * [`QtWidgets.QtWidget()`]([www.google.com](https://doc.qt.io/qt-5/qwidget.html))
+ ### * [PYSide2](https://doc.qt.io/qtforpython/api.html)
 
- ### * [More info](https://doc.bccnsoft.com/docs/PyQt5/)
+ ### * [Difference](https://doc.qt.io/qtforpython/considerations.html)
 
- ### * [best docs](https://doc.qt.io/qtforpython/api.html)
+
