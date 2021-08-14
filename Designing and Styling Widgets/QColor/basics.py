@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets,QtCore,QtGui
+from PySide2 import QtWidgets,QtCore,QtGui
 orange=QtGui.QColor('orange')
 print(orange.red(),orange.green(),orange.yellow(),orange.alpha(),orange.blue(),orange.name())
 

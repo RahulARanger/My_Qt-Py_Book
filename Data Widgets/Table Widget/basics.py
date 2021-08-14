@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets, QtCore, QtGui
+from PySide2 import QtWidgets, QtCore, QtGui
 
 
 class test(QtWidgets.QWidget):
@@ -27,4 +27,4 @@ class test(QtWidgets.QWidget):
 testing = QtWidgets.QApplication([])
 sample = test()
 sample.show()
-testing.exec()
+testing.exec_()

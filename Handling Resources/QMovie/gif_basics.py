@@ -1,4 +1,4 @@
-from PyQt5 import QtGui, QtWidgets
+from PySide2 import QtGui, QtWidgets, QtCore
 
 
 class Testing(QtWidgets.QWidget):
@@ -6,7 +6,9 @@ class Testing(QtWidgets.QWidget):
         super().__init__()
         self.setLayout(QtWidgets.QVBoxLayout())
         self.gif = QtWidgets.QLabel(self)
-        self.gif.setMovie(QtGui.QMovie('REM.gif'))
+        rem = QtGui.QMovie('REM.gif')
+
+        self.gif.setMovie(rem)
         self.gif.movie().start()
         self.layout().addWidget(self.gif)
 
@@ -14,4 +16,4 @@ class Testing(QtWidgets.QWidget):
 test = QtWidgets.QApplication([])
 note = Testing()
 note.show()
-test.exec()
+test.exec_()

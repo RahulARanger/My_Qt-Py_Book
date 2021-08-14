@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PySide2 import QtWidgets
 
 
 # THis has the same woking of the pack() in Tkinter
@@ -42,4 +42,4 @@ DOB: {self.edob.date()}
 {69 * "*"}
         """)
 
-Test().exec()
+Test().exec_()
