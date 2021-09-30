@@ -1,0 +1,7 @@
+{
+  "name": "QPainter",
+  "version": "0.0.1",
+  "requires": [
+    "PySide2"
+  ]
+}

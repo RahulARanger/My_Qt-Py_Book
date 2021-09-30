@@ -1,21 +1,32 @@
-from PyQt5 import QtWidgets,QtGui
-class Editor(QtWidgets.QPlainTextEdit):
-    def __init__(self,parent):
-        super().__init__(parent)
-        self.cur=QtGui.QTextCursor(self.document())
-        self.setTextCursor(self.cur)
-        self.count=0
-        self.cursorPositionChanged.connect(self.test)
-    def test(self,*args):
-        print(args,self.count)
-        self.count+=1
-class test(QtWidgets.QApplication):
-    def __init__(self):
-        super().__init__([])
-        self.window=QtWidgets.QWidget(windowTitle='Editor with Cursor')
-        self.app=Editor(self.window)
-        self.app.move(50,50)
-        self.window.show()
-        
-a=test()
-a.exec()
+from refer import *
+
+test = Test()
+
+cur: QtGui.QTextCursor = test.textCursor()
+
+for _ in test.document().rootFrame():
+    block: QtGui.QTextBlock = _.currentBlock()
+    print(block)
+print(69 * "=")  # for every iteration object changes (since it changes) (so text blocks are created while iterating)
+
+cur.insertText("testing this")  # interacts with the last active text block (cursor position)
+cur.insertText("testing this")  # same as above
+
+for _ in test.document().rootFrame():
+    block: QtGui.QTextBlock = _.currentBlock()
+    print(block)
+print(69 * "=")
+
+
+text_format = QtGui.QTextBlockFormat()
+text_format.setHeadingLevel(1)
+
+char_format = QtGui.QTextCharFormat(text_format)
+char_format.setForeground(QtGui.QBrush(QtGui.QColor("orange")))
+char_format.setBackground(QtGui.QBrush(QtGui.QColor("black")))
+
+cur.insertBlock(text_format, char_format)  # inserts a block and moves the cursor to tht block
+cur.insertText("Testing this again")  # inserts text to the block that the cursor is in
+
+test.show()
+sample.exec_()
