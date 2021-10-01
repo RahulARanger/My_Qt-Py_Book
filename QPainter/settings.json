@@ -1,6 +1,7 @@
 {
   "name": "QPainter",
   "version": "0.0.1",
+  "hosted":  "https://github.com/RahulARanger/My_Qt-Py_Book/blob/master/QPainter/settings.json",
   "requires": [
     "PySide2"
   ]
